@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diehonnemense - Animal welfare organization in the Western Cape, South Africa. Rescuing and caring for animals in need.">
+    <title>Diehonnemense | Giving Hope to Animals in Need</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo/square-logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="images/logo/square-logo.png" alt="Diehonnemense Logo">
+                <span>Diehonnemense</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#animals" class="nav-link">Adopt</a></li>
+                <li><a href="#about" class="nav-link">Who We Are</a></li>
+                <li><a href="#outreaches" class="nav-link">Outreaches</a></li>
+                <li><a href="#donations" class="nav-link">Donate</a></li>
+                <li><a href="#gratitude" class="nav-link">Thank You</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <img src="images/logo/square-logo.png" alt="Diehonnemense Logo" class="hero-logo">
+            <h1 class="hero-title">Diehonnemense</h1>
+            <p class="hero-tagline">Giving hope to animals in need</p>
+            <p class="hero-subtitle">Rescuing, rehabilitating, and rehoming animals in the Western Cape, South Africa</p>
+            <div class="hero-cta">
+                <a href="#animals" class="btn btn-primary">Adopt a Rescue</a>
+                <a href="#donations" class="btn btn-secondary">Donate</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Urgent Plea Section -->
+    <section class="urgent-section" id="urgent">
+        <div class="container">
+            <div class="section-header">
+                <span class="urgent-badge">Urgent Plea</span>
+                <h2 class="section-title">They Need Your Help Now</h2>
+                <p class="section-subtitle">These animals are in critical need of medical care, food, or shelter. Your support can save their lives.</p>
+            </div>
+
+            <div class="urgent-grid" id="urgentGrid">
+                <!-- Urgent animals will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Animal Gallery Section -->
+    <section class="animals-section" id="animals">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Rescues Looking for Forever Homes</h2>
+                <p class="section-subtitle">These animals have been given a second chance and are ready to find their loving families. Click on any photo to learn their story and how you can help.</p>
+            </div>
+
+            <div class="animal-grid" id="animalGrid">
+                <!-- Animals will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <img src="images/logo/bianka.jpeg" alt="Bianka Lerm - Founder of Diehonnemense" class="about-image" loading="lazy">
+                    <div class="about-image-frame"></div>
+                </div>
+
+                <div class="about-text">
+                    <h2 class="section-title">Who We Are</h2>
+                    <p class="about-subtitle">Meet Bianka Lerm - The Heart Behind Diehonnemense</p>
+
+                    <div class="about-story">
+                        <p>What started as one rescue has grown into a lifelong mission. Bianka Lerm founded Diehonnemense with a simple belief: every animal deserves compassion, care, and a chance at a better life.</p>
+
+                        <p>Operating from the Western Cape, South Africa, Bianka has dedicated herself to rescuing animals from dire situations, nursing them back to health, and finding them loving forever homes. Her home has become a sanctuary where the forgotten find hope.</p>
+
+                        <p>With 12 dogs of her own (11 of which are "foster fails" she couldn't bear to part with), Bianka knows firsthand how these animals can transform your life just as much as you transform theirs.</p>
+                    </div>
+
+                    <blockquote class="about-quote">
+                        "Every animal that crosses my path deserves a fighting chance. They don't have a voice, so I'll be their voice."
+                        <cite>- Bianka Lerm</cite>
+                    </blockquote>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Personal Dogs</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">11</span>
+                            <span class="stat-label">Foster Fails</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Animals Rescued</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outreaches Section -->
+    <section class="outreaches-section" id="outreaches">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Community Outreaches</h2>
+                <p class="section-subtitle">Making a difference in communities across the Western Cape</p>
+            </div>
+
+            <div class="outreach-grid">
+                <div class="outreach-card">
+                    <div class="outreach-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Vaccination Drives</h3>
+                    <p>Regular vaccination campaigns in underserved communities to prevent the spread of diseases like parvo and distemper.</p>
+                    <span class="outreach-stat">500+ animals vaccinated</span>
+                </div>
+
+                <div class="outreach-card">
+                    <div class="outreach-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3>Sterilization Programs</h3>
+                    <p>Working with local vets to provide affordable sterilization services, helping control the stray population humanely.</p>
+                    <span class="outreach-stat">200+ animals sterilized</span>
+                </div>
+
+                <div class="outreach-card">
+                    <div class="outreach-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3>Food Distribution</h3>
+                    <p>Monthly food drives providing nutrition to pets in low-income households, ensuring no animal goes hungry.</p>
+                    <span class="outreach-stat">1000+ meals distributed monthly</span>
+                </div>
+
+                <div class="outreach-card">
+                    <div class="outreach-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Education Programs</h3>
+                    <p>Teaching communities about responsible pet ownership, animal welfare, and the importance of veterinary care.</p>
+                    <span class="outreach-stat">20+ communities reached</span>
+                </div>
+            </div>
+
+            <div class="outreach-cta">
+                <p>Want to get involved in our next outreach?</p>
+                <a href="#donations" class="btn btn-primary">Support Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Drives Section -->
+    <section class="donations-section" id="donations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Support Our Mission</h2>
+                <p class="section-subtitle">Every contribution helps us save more lives</p>
+            </div>
+
+            <div class="donation-content">
+                <div class="donation-info">
+                    <div class="donation-card current-drive">
+                        <span class="drive-badge">Current Drive</span>
+                        <h3>Winter Warmth Campaign</h3>
+                        <p>Help us provide blankets, shelter materials, and warm bedding for animals during the cold Western Cape winter months.</p>
+                        <div class="drive-needs">
+                            <h4>Urgent Needs:</h4>
+                            <ul>
+                                <li>Blankets and towels</li>
+                                <li>Dog houses/shelters</li>
+                                <li>Waterproof covers</li>
+                                <li>Straw for bedding</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="donation-card">
+                        <h3>Medical Fund</h3>
+                        <p>Veterinary care is our biggest expense. From vaccinations to emergency surgeries, your donations save lives.</p>
+                        <div class="drive-needs">
+                            <h4>Covers:</h4>
+                            <ul>
+                                <li>Emergency vet visits</li>
+                                <li>Surgeries & treatments</li>
+                                <li>Medications</li>
+                                <li>Sterilizations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="donation-card">
+                        <h3>Food & Supplies</h3>
+                        <p>With many mouths to feed, quality nutrition is essential for the health and recovery of our rescues.</p>
+                        <div class="drive-needs">
+                            <h4>Always Needed:</h4>
+                            <ul>
+                                <li>Premium dog & cat food</li>
+                                <li>Puppy/kitten formula</li>
+                                <li>Treats for training</li>
+                                <li>Collars, leashes, bowls</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="donation-bank">
+                    <h3>Make a Donation</h3>
+                    <p>Your financial support enables us to rescue more animals and provide them with the care they deserve.</p>
+
+                    <div class="bank-details-wrapper">
+                        <img src="images/logo/donation-bank-account.png" alt="Diehonnemense Bank Account Details" class="bank-details-image">
+                    </div>
+
+                    <div class="other-ways">
+                        <h4>Other Ways to Help</h4>
+                        <ul>
+                            <li><strong>Volunteer:</strong> Help with feeding, walking, and socializing animals</li>
+                            <li><strong>Foster:</strong> Provide temporary homes for animals awaiting adoption</li>
+                            <li><strong>Donate Supplies:</strong> Drop off food, blankets, and other essentials</li>
+                            <li><strong>Spread the Word:</strong> Share our posts and help animals find homes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wall of Gratitude Section -->
+    <section class="gratitude-section" id="gratitude">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Wall of Gratitude</h2>
+                <p class="section-subtitle">Thank you to everyone who has helped our animals. Your kindness makes all the difference.</p>
+            </div>
+
+            <div class="gratitude-grid" id="gratitudeGrid">
+                <!-- Gratitude cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo/square-logo.png" alt="Diehonnemense Logo" class="footer-logo">
+                    <p>Giving hope to animals in need since 2018. Based in the Western Cape, South Africa.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#animals">Adopt</a></li>
+                        <li><a href="#about">Who We Are</a></li>
+                        <li><a href="#outreaches">Outreaches</a></li>
+                        <li><a href="#donations">Donate</a></li>
+                        <li><a href="#gratitude">Thank You</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>Western Cape, South Africa</li>
+                        <li>Email: diehonnemense@gmail.com</li>
+                    </ul>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get updates on our rescues and how you can help.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Diehonnemense. All rights reserved.</p>
+                <p>Made with love for animals in need.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animal Modal -->
+    <div class="modal" id="animalModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+
+            <div class="modal-body">
+                <div class="modal-image-section">
+                    <div class="modal-image-container">
+                        <img src="" alt="" class="modal-image" id="modalImage">
+                    </div>
+                    <div class="modal-carousel-dots" id="carouselDots"></div>
+                </div>
+
+                <div class="modal-info">
+                    <h2 class="modal-animal-name" id="modalName"></h2>
+                    <div class="modal-meta">
+                        <span class="modal-breed" id="modalBreed"></span>
+                        <span class="modal-rescue-date" id="modalRescueDate"></span>
+                    </div>
+
+                    <div class="modal-story">
+                        <h3>Their Story</h3>
+                        <p id="modalStory"></p>
+                    </div>
+
+                    <div class="modal-situation">
+                        <h3>Current Situation</h3>
+                        <p id="modalSituation"></p>
+                    </div>
+
+                    <div class="modal-cta">
+                        <h3>Help <span id="modalCtaName"></span></h3>
+                        <p>Your donation directly supports this animal's care, food, and medical needs.</p>
+                        <img src="images/logo/donation-bank-account.png" alt="Donation Bank Details" class="modal-bank-details">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/content-loader.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
