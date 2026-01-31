@@ -3,12 +3,9 @@ const nextConfig = {
   // Enable standalone output for Hostinger Node.js deployment
   output: 'standalone',
 
-  // Image optimization configuration
+  // Disable image optimization (not supported on Hostinger shared hosting)
   images: {
-    // Allow images from local content directory
-    remotePatterns: [],
-    // Disable image optimization in development for faster builds
-    unoptimized: process.env.NODE_ENV === 'development',
+    unoptimized: true,
   },
 
   // Disable x-powered-by header
