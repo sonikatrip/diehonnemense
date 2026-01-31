@@ -1,0 +1,9 @@
+{
+  "name": "diehonnemense",
+  "version": "1.0.0",
+  "description": "Diehonnemense animal welfare website",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  }
+}
