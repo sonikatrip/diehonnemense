@@ -20,10 +20,9 @@ function parseSections(content: string): Record<string, string> {
 }
 
 // Get all images for an animal/entry (1.jpg, 2.jpg, etc.)
-function getImages(basePath: string): string[] {
+function getImages(basePath: string, type: 'animals' | 'gratitude' | 'outreaches', slug: string): string[] {
   const images: string[] = [];
-  const publicPath = basePath.replace(process.cwd(), '').replace('/content/', '/images/content/');
-  
+
   let index = 1;
   const maxImages = 10;
 
@@ -32,9 +31,9 @@ function getImages(basePath: string): string[] {
     const jpegPath = path.join(basePath, `${index}.jpeg`);
 
     if (fs.existsSync(jpgPath)) {
-      images.push(`${publicPath}/${index}.jpg`);
+      images.push(`/images/content/${type}/${slug}/${index}.jpg`);
     } else if (fs.existsSync(jpegPath)) {
-      images.push(`${publicPath}/${index}.jpeg`);
+      images.push(`/images/content/${type}/${slug}/${index}.jpeg`);
     } else {
       break;
     }
@@ -57,7 +56,7 @@ function loadAnimal(slug: string): Animal | null {
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
     const sections = parseSections(content);
-    const images = getImages(basePath);
+    const images = getImages(basePath, 'animals', slug);
 
     return {
       slug,
@@ -110,7 +109,7 @@ function loadGratitudeEntry(slug: string): GratitudeEntry | null {
 
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
-    const images = getImages(basePath);
+    const images = getImages(basePath, 'gratitude', slug);
 
     return {
       slug,
@@ -156,7 +155,7 @@ function loadOutreach(slug: string): Outreach | null {
 
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
-    const images = getImages(basePath);
+    const images = getImages(basePath, 'outreaches', slug);
 
     return {
       slug,
