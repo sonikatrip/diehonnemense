@@ -1,6 +1,11 @@
-import Image from 'next/image';
+import BankDetails from './BankDetails';
+import { BankDetails as BankDetailsType } from '@/lib/bankDetails';
 
-export default function DonationSection() {
+interface DonationSectionProps {
+  bankDetails: BankDetailsType;
+}
+
+export default function DonationSection({ bankDetails }: DonationSectionProps) {
   return (
     <section className="donations-section" id="donations">
       <div className="container">
@@ -10,20 +15,6 @@ export default function DonationSection() {
         </div>
         <div className="donation-content">
           <div className="donation-info">
-            <div className="donation-card current-drive">
-              <span className="drive-badge">Current Drive</span>
-              <h3>Winter Warmth Campaign</h3>
-              <p>Help us provide blankets, shelter materials, and warm bedding for animals during the cold Western Cape winter months.</p>
-              <div className="drive-needs">
-                <h4>Urgent Needs:</h4>
-                <ul>
-                  <li>Blankets and towels</li>
-                  <li>Dog houses/shelters</li>
-                  <li>Waterproof covers</li>
-                  <li>Straw for bedding</li>
-                </ul>
-              </div>
-            </div>
             <div className="donation-card">
               <h3>Medical Fund</h3>
               <p>Veterinary care is our biggest expense. From vaccinations to emergency surgeries, your donations save lives.</p>
@@ -54,9 +45,7 @@ export default function DonationSection() {
           <div className="donation-bank">
             <h3>Make a Donation</h3>
             <p>Your financial support enables us to rescue more animals and provide them with the care they deserve.</p>
-            <div className="bank-details-wrapper">
-              <Image src="/images/logo/donation-bank-account.png" alt="Diehonnemense Bank Account Details" className="bank-details-image" width={400} height={200} />
-            </div>
+            <BankDetails bankDetails={bankDetails} />
             <div className="other-ways">
               <h4>Other Ways to Help</h4>
               <ul>

@@ -8,7 +8,7 @@ export default function Footer() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Thank you for subscribing! We'll send updates to ${email}`);
+    window.location.href = `mailto:diehonnemense@gmail.com?subject=Subscriber : ${encodeURIComponent(email)}`;
     setEmail('');
   };
 
@@ -26,7 +26,6 @@ export default function Footer() {
               <li><a href="#hero">Home</a></li>
               <li><a href="#animals">Adopt</a></li>
               <li><a href="#about">Who We Are</a></li>
-              <li><a href="#outreaches">Outreaches</a></li>
               <li><a href="#donations">Donate</a></li>
               <li><a href="#gratitude">Thank You</a></li>
             </ul>

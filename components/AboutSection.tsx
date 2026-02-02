@@ -21,11 +21,6 @@ export default function AboutSection() {
               &quot;Every animal that crosses my path deserves a fighting chance. They don&apos;t have a voice, so I&apos;ll be their voice.&quot;
               <cite>- Bianka Lerm</cite>
             </blockquote>
-            <div className="about-stats">
-              <div className="stat"><span className="stat-number">12</span><span className="stat-label">Personal Dogs</span></div>
-              <div className="stat"><span className="stat-number">11</span><span className="stat-label">Foster Fails</span></div>
-              <div className="stat"><span className="stat-number">100+</span><span className="stat-label">Animals Rescued</span></div>
-            </div>
           </div>
         </div>
       </div>

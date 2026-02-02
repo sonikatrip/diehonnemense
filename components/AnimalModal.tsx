@@ -3,11 +3,14 @@
 import Image from 'next/image';
 import { useEffect, useCallback } from 'react';
 import { Animal } from '@/lib/types';
+import { BankDetails as BankDetailsType } from '@/lib/bankDetails';
+import BankDetails from './BankDetails';
 
 interface AnimalModalProps {
   animal: Animal | null;
   isOpen: boolean;
   onClose: () => void;
+  bankDetails: BankDetailsType;
 }
 
 function formatDate(dateString: string): string {
@@ -15,7 +18,7 @@ function formatDate(dateString: string): string {
   return new Date(dateString).toLocaleDateString('en-ZA', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-export default function AnimalModal({ animal, isOpen, onClose }: AnimalModalProps) {
+export default function AnimalModal({ animal, isOpen, onClose, bankDetails }: AnimalModalProps) {
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') onClose();
   }, [onClose]);
@@ -63,7 +66,7 @@ export default function AnimalModal({ animal, isOpen, onClose }: AnimalModalProp
             <div className="modal-cta">
               <h3>Help {animal.name}</h3>
               <p>Your donation directly supports this animal&apos;s care, food, and medical needs.</p>
-              <Image src="/images/logo/donation-bank-account.png" alt="Donation Bank Details" className="modal-bank-details" width={300} height={150} />
+              <BankDetails bankDetails={bankDetails} reference={animal.name} />
             </div>
           </div>
         </div>
