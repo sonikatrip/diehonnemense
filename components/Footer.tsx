@@ -27,7 +27,7 @@ export default function Footer() {
               <li><a href="#animals">Adopt</a></li>
               <li><a href="#about">Who We Are</a></li>
               <li><a href="#donations">Donate</a></li>
-              <li><a href="#gratitude">Thank You</a></li>
+              {/* <li><a href="#gratitude">Thank You</a></li> */}
             </ul>
           </div>
           <div className="footer-contact">
@@ -54,7 +54,7 @@ export default function Footer() {
           <div className="footer-newsletter">
             <h4>Stay Updated</h4>
             <p>Get updates on our rescues and how you can help.</p>
-            <form className="newsletter-form" onSubmit={handleSubmit}>
+            <form className="newsletter-form" onSubmit={handleSubmit} suppressHydrationWarning>
               <input type="email" placeholder="Your email address" required value={email} onChange={(e) => setEmail(e.target.value)} />
               <button type="submit" className="btn btn-primary">Subscribe</button>
             </form>

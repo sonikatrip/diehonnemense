@@ -57,7 +57,7 @@ export default function Navbar() {
           <li><Link href="/" className="nav-link" onClick={() => setMenuOpen(false)}>Home</Link></li>
           <li><a href={getHref('#animals')} className="nav-link nav-btn nav-btn-adopt" onClick={(e) => handleNavClick(e, '#animals')}>🤍 Adopt</a></li>
           <li><a href={getHref('#donations')} className="nav-link nav-btn nav-btn-donate" onClick={(e) => handleNavClick(e, '#donations')}>Donate</a></li>
-          <li><a href={getHref('#gratitude')} className="nav-link" onClick={(e) => handleNavClick(e, '#gratitude')}>Thank You</a></li>
+          {/* <li><a href={getHref('#gratitude')} className="nav-link" onClick={(e) => handleNavClick(e, '#gratitude')}>Thank You</a></li> */}
           <li><a href={getHref('#about')} className="nav-link" onClick={(e) => handleNavClick(e, '#about')}>Who We Are</a></li>
         </ul>
       </div>

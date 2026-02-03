@@ -1,10 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { loadAnimals } from '@/lib/content';
 import { loadBankDetails } from '@/lib/bankDetails';
 import BankDetails from '@/components/BankDetails';
 import EnquiryForm from '@/components/EnquiryForm';
+import ImageCarousel from '@/components/ImageCarousel';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -40,11 +40,11 @@ export default function AnimalPage({ params }: AnimalPageProps) {
 
           <div className="animal-page-content">
             <div className="animal-page-left">
-              <div className="animal-page-image">
-                {animal.images[0] && (
-                  <Image src={animal.images[0]} alt={animal.name} fill sizes="500px" />
-                )}
-              </div>
+              {animal.images.length > 0 && (
+                <div className="animal-page-image">
+                  <ImageCarousel images={animal.images} alt={animal.name} />
+                </div>
+              )}
 
               <div className="animal-page-enquiry">
                 <EnquiryForm animalName={animal.name} />
