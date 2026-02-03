@@ -2162,7 +2162,8 @@ button {
     }
 
     .hero {
-        min-height: 65vh;
+        min-height: auto;
+        padding-top: 120px;
     }
 
     .hero-logo {
@@ -2220,8 +2221,8 @@ button {
     }
 
     .hero {
-        min-height: 60vh;
-        padding: var(--spacing-2xl) 0;
+        min-height: auto;
+        padding-top: 110px;
     }
 
     .hero-logo {
