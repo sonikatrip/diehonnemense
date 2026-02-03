@@ -98,7 +98,7 @@ export function loadAnimals(): Animal[] {
 }
 
 // Load a single gratitude entry
-function loadGratitudeEntry(slug: string): GratitudeEntry | null {
+function loadGratitudeEntryInternal(slug: string): GratitudeEntry | null {
   const basePath = path.join(contentDirectory, 'gratitude', slug);
   const filePath = path.join(basePath, 'entry.md');
 
@@ -117,12 +117,17 @@ function loadGratitudeEntry(slug: string): GratitudeEntry | null {
       date: data.date || '',
       type: data.type || 'donation',
       description: content.trim(),
-      image: images.length > 0 ? images[0] : null,
+      images,
     };
   } catch (error) {
     console.error(`Error loading gratitude entry ${slug}:`, error);
     return null;
   }
+}
+
+// Load a gratitude entry by slug
+export function loadGratitudeEntry(slug: string): GratitudeEntry | null {
+  return loadGratitudeEntryInternal(slug);
 }
 
 // Load all gratitude entries
@@ -133,7 +138,7 @@ export function loadGratitude(): GratitudeEntry[] {
     const manifest: Manifest = JSON.parse(manifestContents);
 
     const entries = (manifest.entries || [])
-      .map((slug) => loadGratitudeEntry(slug))
+      .map((slug) => loadGratitudeEntryInternal(slug))
       .filter((entry): entry is GratitudeEntry => entry !== null);
 
     return entries;

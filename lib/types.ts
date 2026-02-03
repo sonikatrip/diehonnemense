@@ -20,7 +20,7 @@ export interface GratitudeEntry {
   date: string;
   type: string;
   description: string;
-  image: string | null;
+  images: string[];
 }
 
 export interface Outreach {

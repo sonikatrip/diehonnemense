@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { GratitudeEntry } from '@/lib/types';
 
 interface GratitudeSectionProps {
@@ -22,10 +23,10 @@ export default function GratitudeSection({ entries }: GratitudeSectionProps) {
         </div>
         <div className="gratitude-grid">
           {sortedEntries.map(entry => (
-            <div key={entry.slug} className={`gratitude-card${!entry.image ? ' simple' : ''}`}>
-              {entry.image ? (
+            <Link key={entry.slug} href={`/gratitude/${entry.slug}`} className={`gratitude-card${entry.images.length === 0 ? ' simple' : ''}`}>
+              {entry.images.length > 0 ? (
                 <>
-                  <Image src={entry.image} alt={entry.name} className="gratitude-card-image" width={400} height={225} />
+                  <Image src={entry.images[0]} alt={entry.name} className="gratitude-card-image" width={400} height={225} />
                   <div className="gratitude-card-content">
                     <h3 className="gratitude-card-name">{entry.name}</h3>
                     <p className="gratitude-card-date">{formatDate(entry.date)}</p>
@@ -46,7 +47,7 @@ export default function GratitudeSection({ entries }: GratitudeSectionProps) {
                   </div>
                 </>
               )}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

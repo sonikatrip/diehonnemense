@@ -1217,6 +1217,7 @@ button {
 }
 
 .gratitude-card {
+    display: block;
     background-color: var(--color-white);
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -1227,6 +1228,7 @@ button {
 .gratitude-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
+    cursor: pointer;
 }
 
 .gratitude-card-image {
@@ -1300,6 +1302,217 @@ button {
 @media (max-width: 768px) {
     .gratitude-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Image Carousel ===== */
+.image-carousel {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.carousel-image-container {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.carousel-image-container img {
+    object-fit: cover;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+    z-index: 2;
+}
+
+.carousel-arrow:hover {
+    background-color: var(--color-white);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-text);
+}
+
+.carousel-arrow-left {
+    left: var(--spacing-md);
+}
+
+.carousel-arrow-right {
+    right: var(--spacing-md);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background-color: var(--color-background);
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-text-muted);
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    border: none;
+}
+
+.carousel-dot:hover {
+    opacity: 0.6;
+}
+
+.carousel-dot.active {
+    opacity: 1;
+    background-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .carousel-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .carousel-arrow-left {
+        left: var(--spacing-sm);
+    }
+
+    .carousel-arrow-right {
+        right: var(--spacing-sm);
+    }
+}
+
+/* ===== Gratitude Detail Page ===== */
+.gratitude-page {
+    padding-top: 140px;
+    padding-bottom: var(--spacing-3xl);
+    min-height: 100vh;
+    background-color: var(--color-background);
+    animation: pageFadeIn 0.6s ease-out;
+}
+
+.gratitude-page-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.gratitude-page-images {
+    position: sticky;
+    top: 140px;
+}
+
+.gratitude-page-info {
+    background-color: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.gratitude-page-name {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.gratitude-page-meta {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.gratitude-page-type {
+    display: inline-block;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+}
+
+.gratitude-page-date {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    display: flex;
+    align-items: center;
+}
+
+.gratitude-page-description {
+    margin-bottom: var(--spacing-xl);
+}
+
+.gratitude-page-description p {
+    color: var(--color-text);
+    line-height: 1.8;
+    font-size: 1.0625rem;
+}
+
+.gratitude-page-thanks {
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, #E8F5E3 100%);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    border: 2px solid var(--color-primary);
+}
+
+.gratitude-page-thanks svg {
+    width: 32px;
+    height: 32px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.gratitude-page-thanks p {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-primary-dark);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .gratitude-page-content {
+        grid-template-columns: 1fr;
+    }
+
+    .gratitude-page-images {
+        position: static;
+    }
+
+    .gratitude-page-thanks {
+        flex-direction: column;
+        text-align: center;
     }
 }
 

@@ -20,9 +20,9 @@ export default function Home() {
       <Hero />
       <UrgentSection animals={animals} />
       <AnimalGrid animals={animals} />
-      <AboutSection />
       <DonationSection bankDetails={bankDetails} />
       <GratitudeSection entries={gratitude} />
+      <AboutSection />
       <Footer />
     </>
   );
